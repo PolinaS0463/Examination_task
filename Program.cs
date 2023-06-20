@@ -57,7 +57,7 @@ string[] CreateNewArray(string[] array){
 }
 
 void PrintArray(string[] array){
-    Console.WriteLine("Массив: " + string.Join(", ", array));
+    Console.WriteLine("Массив: [" + string.Join(", ", array) + "]");
 }
 
 //II. Способ:
