@@ -60,3 +60,33 @@ void PrintArray(string[] array){
     Console.WriteLine("Массив: " + string.Join(", ", array));
 }
 
+//II. Способ:
+
+GetLength();
+string[] array2 = new string[amount];
+string[] doubleArray = new string[amount];
+FillArray(array2, amount);
+FillDoubleArray(array2, doubleArray);
+PrintDoubleArray(doubleArray);
+
+string[] FillDoubleArray(string[] array2, string[] doubleArray){
+    int count = 0;
+    foreach(string element in array2){
+        if(element.Length <= 3){
+            doubleArray[count] = element;
+            count++;
+        }
+    }
+    return doubleArray;
+}
+
+void PrintDoubleArray(string[] doubleArray){
+    Console.Write("[");
+    foreach(string element in doubleArray){
+        if(element == null){
+            break;
+        }
+        Console.Write($"{element}, ");
+    }
+    Console.Write("]");
+}
